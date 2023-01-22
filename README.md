@@ -1,1 +1,7 @@
 # Enigma-machine
+
+The Enigma machine is a stream cipher. A stream cipher is a symmetric key cipher where plaintext digits are combined with a pseudorandom cipher digit stream also called keystream. In a stream cipher each plaintext digit is encrypted one at a time with the corresponding digit of the keystream, to give a digit of the ciphertext stream. Stream ciphers are much harder to get secure because they don't decorrelate the input characters, which is in contrast to block ciphers.
+
+I have implemented two versions of the Enigma machine both from scratch. The standard Enigma machine encodes a maximum of 10 idiosyncratic pairs of plugleads into the plugboard. The encoding of one letter into another is predetermined and changed daily by the operator by consulting the Enigma settings sheet. My second implementation, EnigmaRnd allows to encode 11 non-idiosyncratic pairs of plugleads. This is not any arbitrary number, but instead the number of pairs yielding the highest number of combinations (2.05552E14) on a 26 characters set.
+
+The latest specifications for the encryption of electronic data (AES-256), which currently has the largest key length of 256 bits, is practically unbreakable by brute force based on current computing power. With that in mind, EnigmaRnd has 27 orders of magnitude more settings than Enigma M3 and a key length of 157 bits, which is remarkable considering that the encryption is done using electromechanical implementations.
